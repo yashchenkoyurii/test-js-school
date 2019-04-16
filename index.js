@@ -59,10 +59,9 @@ const params = {
 
 const lineCount = params.lines.length;
 const color = () => "#"+((1<<24)*Math.random()|0).toString(16);
+const app = document.querySelector('#app');
 
 params.lines.forEach((line) => {
-    const app = document.querySelector('#app');
-
     const lineNode = document.createElement('div');
     lineNode.setAttribute('style', `height: ${100/lineCount}%; background-color: ${line.background}`);
     
